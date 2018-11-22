@@ -50,9 +50,7 @@ ul {
   border-top: 1rem solid #3a5E63;
   position: relative;
 }
-
-.bg-header:before,
-.bg-header:after {
+.bg-header:before, .bg-header:after {
   content: "";
   position: absolute;
   bottom: -1rem;
@@ -60,32 +58,26 @@ ul {
   width: 30%;
   background-color: #3a5E63;
 }
-
 .bg-header:before {
   left: 0;
 }
-
 .bg-header:after {
   right: 0;
 }
-
 .bg-focal {
   background-color: #C9A689;
   color: #7C593C;
 }
-
 .bg-content1 {
   background-color: #FFFFFF;
   color: #222;
   font-weight: 100;
 }
-
 .bg-content2 {
   background-color: #C7F7FF;
   color: #3a5E63;
   font-weight: 100;
 }
-
 .bg-footer {
   background-color: #FFFFFF;
   color: #d4d4d4;
@@ -97,12 +89,10 @@ header {
   margin: 0 auto;
   position: relative;
 }
-
 header h1 {
   width: 100%;
   padding: 0 2rem;
 }
-
 header nav {
   width: 100%;
   display: flex;
@@ -112,7 +102,6 @@ header nav {
   align-items: stretch;
   padding: 2rem 0;
 }
-
 header nav > a {
   flex-basis: 100%;
   flex-grow: 1;
@@ -125,12 +114,10 @@ section.focal {
   /* default */
   margin: 0 auto;
 }
-
 section.content1 {
   padding: 2rem 0;
 }
-
-section.content2 {
+sectioncontent2 {
   padding: 2rem 0;
 }
 
@@ -140,36 +127,31 @@ section.content2 {
   justify-content: flex-start;
   align-items: stretch;
 }
-
-.row .col {
+.row.col {
   flex-basis: 100%;
   /* mobile default */
 }
 
-footer .row {
+footer {
+  padding: 2rem 0;
+}
+footer.row {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
 }
-
-footer .row > * {
+footer.row > * {
   flex-basis: 50%;
   padding-bottom: 2rem;
   border-left: 1px solid #3a5E63;
   margin-bottom: 2rem;
 }
-
-footer .row.last-row > * {
+footer.row.last-row > * {
   flex-basis: 100%;
 }
-
-footer .row .col:first-child {
+footer.row .col:first-child {
   border-left: 0;
-}
-
-footer {
-  padding: 2rem 0;
 }
 
 /***********************************************
@@ -187,7 +169,6 @@ header nav > a {
   line-height: 1;
   background-color: #FFFFFF;
 }
-
 header nav > a:hover {
   font-weight: 700;
   color: #7C593C;
@@ -200,7 +181,6 @@ header h1 {
   color: #7C593C;
   letter-spacing: 0.1rem;
 }
-
 header h1 i.fa-lg {
   display: block;
   width: 25%;
@@ -209,7 +189,6 @@ header h1 i.fa-lg {
   line-height: 12.7936rem;
   color: #C9A689;
 }
-
 header h1 i.fa-lg ~ span {
   float: right;
   width: 75%;
