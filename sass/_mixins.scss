@@ -5,10 +5,7 @@
 ************/
 
 *{
-    padding:0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    @extend %all;
 }
 *:after,
 *:before{
@@ -16,14 +13,10 @@
     box-sizing: inherit;
 }
 html{
-    font-size: 16px;
-    font-family: $main-font-family;
-    line-height: 1.6;
-    font-weight: 400;
+    @extend %html;
 }
 h1, h2, h3, h4{
-    font-weight: 700;
-    font-family: $header-font-family;
+    @extend %headers;
 }
 ul{
     list-style: none;
@@ -34,22 +27,11 @@ ul{
 ***********************************************/
 .bg{
     &-header{
-    background-color:$white;
-    background-color:$light-blue;
-    color: $dark-grey;
-    color:$white;
-    border-bottom:1rem solid $med-blue;
-    border-top:1rem solid $dark-blue;
-    position: relative;
+    @extend %header;
     }
     &-header:before,
     &-header:after{
-        content:"";
-        position:absolute;
-        bottom:-1rem;
-        height:1rem;
-        width:30%;
-        background-color:$dark-blue;
+        @extend %header-after;
     }
     &-header:before{
         left:0;
@@ -198,110 +180,116 @@ header h1{
     }
 }
 
-.focal h2{
+.focal{ 
+    &h2{
     font-size: 1.999rem;
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
+    }
+    & .author{
+        font-size: 1rem;
+        padding: 0.2rem 2rem 2rem;
+    }
 }
-.focal .author{
-    font-size: 1rem;
-    padding: 0.2rem 2rem 2rem;
-}
-
-.content1 h3{
+.content1{
+    & h3{
     font-size:1.999rem;
     padding: 0.2rem 2rem 2rem;
+    }
+    & h3 i{
+        vertical-align:middle;
+        padding-right: 2rem;
+    }
+    & p{
+        font-size: 1.414rem;
+        padding: 0.5rem 2rem 2rem;
+    }
 }
-.content1 h3 i{
-    vertical-align:middle;
-    padding-right: 2rem;
-}
-.content1 p{
-    font-size: 1.414rem;
-    padding: 0.5rem 2rem 2rem;
-}
-
-.content2 h3{
+.content2{
+    & h3{
     font-size: 1.999rem;
     padding: 1rem 2rem 0.5rem;
-}
-.content2 h4{
-    font-size: 1.999rem;
-    padding: 1rem 2rem 0rem;
-}
-.content2 p{
-    font-size: 1.414rem;
-    padding: 0.5rem 2rem 1rem;
-}
-.content2 li{
-    padding: 0.5rem 2rem;
-    font-size: 1.414rem;
-}
+    }
+    & h4{
+        font-size: 1.999rem;
+        padding: 1rem 2rem 0rem;
+    }
+    & p{
+        font-size: 1.414rem;
+        padding: 0.5rem 2rem 1rem;
+    }
+    & li{
+        padding: 0.5rem 2rem;
+        font-size: 1.414rem;
+    }
 
-.content2 span[lang]{
-    position: relative;
-}
-.content2 span:hover:after{
-    position: absolute;
-    top: -0.5rem;
-    left: 0;
-    content: attr(data-country);
-    display: block;
-    padding: 0.2rem 1rem 0.2rem 2rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    height: 2rem;
-    width: auto;
-    word-break: keep-all;
-    overflow-wrap: normal;
-    overflow: hidden;
-    background-color: $no-color;
-    background-image: url(../img/uk-icon.png);
-    background-repeat: no-repeat;
-    background-size: 1.5rem auto;
-    background-position: left center;
-}
-.content2 h4 span[lang="sv"]:after{
-    background-image: url(../img/sv-icon.png);
-}
-.content2 h4 span[lang="pt"]:after{
-    background-image: url(../img/pt-icon.png);
-}
-.content2 h4 span[lang="fr"]:after{
-    background-image: url(../img/fr-icon.png);
-}
-.content2 h4 span[lang="no"]:after{
-    background-image: url(../img/no-icon.png);
-}
-.content2 h4 span[lang="hi"]:after{
-    background-image: url(../img/hi-icon.png);
-}
-.content2 h4 span[lang="es"]:after{
-    background-image: url(../img/es-icon.png);
+    & span[lang]{
+        position: relative;
+    }
+    & span:hover:after{
+        position: absolute;
+        top: -0.5rem;
+        left: 0;
+        content: attr(data-country);
+        display: block;
+        padding: 0.2rem 1rem 0.2rem 2rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        height: 2rem;
+        width: auto;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        overflow: hidden;
+        background-color: $no-color;
+        background-image: url(../img/uk-icon.png);
+        background-repeat: no-repeat;
+        background-size: 1.5rem auto;
+        background-position: left center;
+    }
+    & h4 span[lang="sv"]:after{
+        background-image: url(../img/sv-icon.png);
+    }
+    & h4 span[lang="pt"]:after{
+        background-image: url(../img/pt-icon.png);
+    }
+    & h4 span[lang="fr"]:after{
+        background-image: url(../img/fr-icon.png);
+    }
+    & h4 span[lang="no"]:after{
+        background-image: url(../img/no-icon.png);
+    }
+    & h4 span[lang="hi"]:after{
+        background-image: url(../img/hi-icon.png);
+    }
+    & h4 span[lang="es"]:after{
+        background-image: url(../img/es-icon.png);
+    }
 }
 /***********************************************
                 FOOTER
 ***********************************************/
-footer h4{
-    font-size: 1.414rem;
-    padding: 0.5rem 2rem;
-    color: $dark-brown;
-}
-footer p{
-    font-size: 1rem;
-    padding: 0.5rem 2rem;
-    color: $dark-grey;
-}
-footer .fa-circle{
-    color: $dark-grey;
-}
-footer h4[lang=de]{
-   display:block;
-}
-footer h4[lang=en],
-footer h4[lang=ar],
-footer h4[lang=ru]{
-    display:none;
+footer{
+    & h4{
+        font-size: 1.414rem;
+        padding: 0.5rem 2rem;
+        color: $dark-brown;
+    }
+    & p{
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+        color: $dark-grey;
+    }
+    & .fa-circle{
+        color: $dark-grey;
+    }
+    & h4[lang=de]{
+       display:block;
+    }
+    & h4[lang=en],
+    & h4[lang=ar],
+    & h4[lang=ru]{
+        display:none;
+    }
 }
 /***********************************************
                 MEDIA QUERIES

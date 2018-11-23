@@ -9,19 +9,6 @@
     MIXINS
 
 ************/
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*:after,
-*:before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
 html {
   font-size: 16px;
   font-family: "Josefin Sans", ‘Trebuchet MS’, Helvetica, sans-serif;
@@ -32,10 +19,6 @@ html {
 h1, h2, h3, h4 {
   font-weight: 700;
   font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-}
-
-ul {
-  list-style: none;
 }
 
 /***********************************************
@@ -50,6 +33,7 @@ ul {
   border-top: 1rem solid #3a5E63;
   position: relative;
 }
+
 .bg-header:before, .bg-header:after {
   content: "";
   position: absolute;
@@ -58,6 +42,32 @@ ul {
   width: 30%;
   background-color: #3a5E63;
 }
+
+/***********
+
+    MIXINS
+
+************/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/***********************************************
+                LAYOUT
+***********************************************/
 .bg-header:before {
   left: 0;
 }
@@ -200,12 +210,11 @@ header h1 i.fa-lg ~ span {
   text-align: right;
 }
 
-.focal h2 {
+.focalh2 {
   font-size: 1.999rem;
   line-height: 1.2;
   padding: 2rem 2rem 1rem 2rem;
 }
-
 .focal .author {
   font-size: 1rem;
   padding: 0.2rem 2rem 2rem;
@@ -215,12 +224,10 @@ header h1 i.fa-lg ~ span {
   font-size: 1.999rem;
   padding: 0.2rem 2rem 2rem;
 }
-
 .content1 h3 i {
   vertical-align: middle;
   padding-right: 2rem;
 }
-
 .content1 p {
   font-size: 1.414rem;
   padding: 0.5rem 2rem 2rem;
@@ -230,26 +237,21 @@ header h1 i.fa-lg ~ span {
   font-size: 1.999rem;
   padding: 1rem 2rem 0.5rem;
 }
-
 .content2 h4 {
   font-size: 1.999rem;
   padding: 1rem 2rem 0rem;
 }
-
 .content2 p {
   font-size: 1.414rem;
   padding: 0.5rem 2rem 1rem;
 }
-
 .content2 li {
   padding: 0.5rem 2rem;
   font-size: 1.414rem;
 }
-
 .content2 span[lang] {
   position: relative;
 }
-
 .content2 span:hover:after {
   position: absolute;
   top: -0.5rem;
@@ -270,27 +272,21 @@ header h1 i.fa-lg ~ span {
   background-size: 1.5rem auto;
   background-position: left center;
 }
-
 .content2 h4 span[lang=sv]:after {
   background-image: url(../img/sv-icon.png);
 }
-
 .content2 h4 span[lang=pt]:after {
   background-image: url(../img/pt-icon.png);
 }
-
 .content2 h4 span[lang=fr]:after {
   background-image: url(../img/fr-icon.png);
 }
-
 .content2 h4 span[lang=no]:after {
   background-image: url(../img/no-icon.png);
 }
-
 .content2 h4 span[lang=hi]:after {
   background-image: url(../img/hi-icon.png);
 }
-
 .content2 h4 span[lang=es]:after {
   background-image: url(../img/es-icon.png);
 }
@@ -303,24 +299,18 @@ footer h4 {
   padding: 0.5rem 2rem;
   color: #7C593C;
 }
-
 footer p {
   font-size: 1rem;
   padding: 0.5rem 2rem;
   color: #222;
 }
-
 footer .fa-circle {
   color: #222;
 }
-
 footer h4[lang=de] {
   display: block;
 }
-
-footer h4[lang=en],
-footer h4[lang=ar],
-footer h4[lang=ru] {
+footer h4[lang=en], footer h4[lang=ar], footer h4[lang=ru] {
   display: none;
 }
 

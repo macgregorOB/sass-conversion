@@ -23,3 +23,47 @@ $no-color:rgba(255,255,255,0.8);
 
 $main-font-family:'Josefin Sans', ‘Trebuchet MS’, Helvetica, sans-serif; 
 $header-font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+
+/***********
+
+    MIXINS
+
+************/
+%all{
+    padding:0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+%html{
+    font-size: 16px;
+    font-family: $main-font-family;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+%headers{
+    font-weight: 700;
+    font-family: $header-font-family;
+}
+
+/***********************************************
+                LAYOUT
+***********************************************/
+%header{
+    background-color:$white;
+    background-color:$light-blue;
+    color: $dark-grey;
+    color:$white;
+    border-bottom:1rem solid $med-blue;
+    border-top:1rem solid $dark-blue;
+    position: relative;
+}
+%header-after{
+    content:"";
+    position:absolute;
+    bottom:-1rem;
+    height:1rem;
+    width:30%;
+    background-color:$dark-blue;
+}
