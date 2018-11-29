@@ -50,7 +50,7 @@ $header-font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatin
 /***********************************************
                 LAYOUT
 ***********************************************/
-%header{
+%bg-header{
     background-color:$white;
     background-color:$light-blue;
     color: $dark-grey;
@@ -59,7 +59,7 @@ $header-font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatin
     border-top:1rem solid $dark-blue;
     position: relative;
 }
-%header-after{
+%bg-header-after{
     content:"";
     position:absolute;
     bottom:-1rem;
@@ -67,3 +67,284 @@ $header-font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatin
     width:30%;
     background-color:$dark-blue;
 }
+
+%focal{
+    background-color: $light-brown;
+        color: $dark-brown;
+}
+
+%content1{
+      background-color: $white;
+        color: $dark-grey;
+        font-weight: 100;
+}
+
+%content2{
+    background-color: $light-blue;
+        color: $dark-blue;
+        font-weight: 100;
+}
+
+%footer{
+    background-color: $white;
+        color: $grey;
+}
+
+%header{
+    width: 400px; /* default min screen width */
+    margin: 0 auto;
+    position: relative;
+}
+
+%header-h1{
+    width: 100%;
+    padding: 0 2rem;
+}
+
+%header-nav{
+    width: 100%;
+        display: flex;
+        flex-direction: column; /* mobile first */
+        justify-content: flex-start;
+        align-items: stretch;
+        padding:2rem 0;
+}
+
+%header-nav-a{
+    flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align: center;
+}
+
+%section-focal{
+    width: 400px; /* default */
+    margin: 0 auto;
+}
+
+%section-content1{
+    padding: 2rem 0;
+}
+
+%section-content2{
+    padding:2rem 0;
+}
+
+%row{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:stretch;
+}
+
+%row-col{
+    flex-basis: 100%; /* mobile default */
+}
+
+%footer{
+    padding:2rem 0;
+}
+
+%footer-row{
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+%footer-row2{
+    flex-basis: 50%;
+    padding-bottom: 2rem;
+    border-left:1px solid #3a5E63;
+    margin-bottom: 2rem;
+}
+
+%footer-lastrow{
+     flex-basis: 100%;
+}
+
+%footer-row-col{
+    border-left: 0;
+}
+
+/***********************************************
+                NAVIGATION
+***********************************************/
+
+%header-nav{
+    text-align: center;
+        text-decoration: none;
+        color: $dark-grey;    
+        font-size: 1.414rem;
+        letter-spacing: 0.25rem;
+        border:1px solid $grey; 
+        border-bottom: none;
+        padding:1.0rem 2rem;
+        line-height: 1;
+        background-color: $white;
+}
+
+%header-nav-a{
+    font-weight: 700;
+        color:$dark-brown;
+}
+
+/***********************************************
+                CONTENT
+***********************************************/
+
+%header-h1{
+    color: $dark-brown;
+    letter-spacing: 0.1rem;
+}
+
+%header-i-fa-lg{
+    display:block;
+        width: 25%;
+        float:left;
+        font-size: 7rem;
+        line-height: 12.7936rem;
+        color: $light-brown;
+}
+
+%header-i-fa-lg-span{
+    float: right;
+        width: 75%;
+        font-size: 3.998rem;
+        /**
+        2 lines of 3.998 * 1.6 = 12.7936
+        **/
+        padding-left: 1rem;
+        text-align: right;
+}
+
+%focal-h2{
+    font-size: 1.999rem;
+    line-height: 1.2;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+%focal-author{
+    font-size: 1rem;
+        padding: 0.2rem 2rem 2rem;
+}
+
+%content1-h3{
+    font-size:1.999rem;
+    padding: 0.2rem 2rem 2rem;
+}
+
+%content1-h3-i{
+       vertical-align:middle;
+        padding-right: 2rem;
+}
+
+%content1-p{
+       font-size: 1.414rem;
+        padding: 0.5rem 2rem 2rem;
+}
+
+%content2-h3{
+    font-size: 1.999rem;
+    padding: 1rem 2rem 0.5rem;
+}
+
+%content2-h4{
+    font-size: 1.999rem;
+        padding: 1rem 2rem 0rem;
+}
+
+%content2-p{
+    font-size: 1.414rem;
+        padding: 0.5rem 2rem 1rem;
+}
+
+%content2-li{
+    padding: 0.5rem 2rem;
+        font-size: 1.414rem;
+}
+
+%content2-span{
+    position: relative;
+}
+
+%content2-span-hover{
+    position: absolute;
+        top: -0.5rem;
+        left: 0;
+        content: attr(data-country);
+        display: block;
+        padding: 0.2rem 1rem 0.2rem 2rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        height: 2rem;
+        width: auto;
+        word-break: keep-all;
+        overflow-wrap: normal;
+        overflow: hidden;
+        background-color: $no-color;
+        background-image: url(../img/uk-icon.png);
+        background-repeat: no-repeat;
+        background-size: 1.5rem auto;
+        background-position: left center;
+}
+/***********************************************
+                FOOTER
+***********************************************/
+
+%footer2-h4{
+     font-size: 1.414rem;
+        padding: 0.5rem 2rem;
+        color: $dark-brown;
+}
+
+%footer2-p{
+    font-size: 1rem;
+        padding: 0.5rem 2rem;
+        color: $dark-grey;
+}
+
+%footer2-fa-circle{
+    color: $dark-grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
